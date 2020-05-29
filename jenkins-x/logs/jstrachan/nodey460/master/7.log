@@ -1,0 +1,300 @@
+
+Showing logs for build [32mjstrachan-nodey460-master-d8l4n-7[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-ns7cb[0m
+{"level":"info","ts":1590766365.3651276,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1590766365.3658798,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjstrachan-nodey460-master-d8l4n-7[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-zdbf8[0m
+{"level":"info","ts":1590766366.6662962,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1590766366.6675198,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjstrachan-nodey460-master-d8l4n-7[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjstrachan-nodey460-master-d8l4n-7[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jstrachan-nodey460-master-d8l4n-p64vt[0m
+{"level":"info","ts":1590766373.791901,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1590766374.8719933,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/jstrachan/nodey460.git @ v1.0.9 in path /workspace/source"}
+
+Showing logs for build [32mjstrachan-nodey460-master-d8l4n-7[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mjstrachan-nodey460-master-d8l4n-7[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mjstrachan-nodey460-master-d8l4n-7[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mjstrachan-nodey460-master-d8l4n-7[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN REPLACE_ME@1.0.9 No repository field.
+npm WARN REPLACE_ME@1.0.9 No license field.
+
+up to date in 0.365s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mjstrachan-nodey460-master-d8l4n-7[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> REPLACE_ME@1.0.9 test /workspace/source
+> echo "no test specified" && exit 0
+
+no test specified
+
+Showing logs for build [32mjstrachan-nodey460-master-d8l4n-7[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+ERROR: logging before flag.Parse: E0529 15:33:06.352550       9 metadata.go:241] Failed to unmarshal scopes: json: cannot unmarshal string into Go value of type []string
+[36mINFO[0m[0000] Resolved base name node:9-slim to node:9-slim 
+[36mINFO[0m[0000] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0000] Resolved base name node:9-slim to node:9-slim 
+[36mINFO[0m[0000] Retrieving image manifest node:9-slim        
+ERROR: logging before flag.Parse: E0529 15:33:06.638362       9 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0529 15:33:06.640326       9 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0001] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0002] Built cross stage deps: map[]                
+[36mINFO[0m[0002] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0003] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0004] cmd: EXPOSE                                  
+[36mINFO[0m[0004] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0004] Checking for cached layer gcr.io/jstrachan-multicluster/cache:6c7691af3464c1beb8793e77393d32f7c756c020cbb2ba0c5d97be802b29515e... 
+[36mINFO[0m[0004] No cached layer found for cmd COPY . .       
+[36mINFO[0m[0004] Unpacking rootfs as cmd COPY . . requires it. 
+[36mINFO[0m[0009] Taking snapshot of full filesystem...        
+[36mINFO[0m[0011] Resolving paths                              
+[36mINFO[0m[0012] ENV PORT 8080                                
+[36mINFO[0m[0012] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0012] EXPOSE 8080                                  
+[36mINFO[0m[0012] cmd: EXPOSE                                  
+[36mINFO[0m[0012] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0012] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0012] WORKDIR /usr/src/app                         
+[36mINFO[0m[0012] cmd: workdir                                 
+[36mINFO[0m[0012] Changed working directory to /usr/src/app    
+[36mINFO[0m[0012] Creating directory /usr/src/app              
+[36mINFO[0m[0012] Resolving paths                              
+[36mINFO[0m[0012] Taking snapshot of files...                  
+[36mINFO[0m[0012] COPY . .                                     
+[36mINFO[0m[0012] Resolving paths                              
+[36mINFO[0m[0012] Taking snapshot of files...                  
+[36mINFO[0m[0012] CMD ["npm", "start"]                         
+[36mINFO[0m[0012] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0012] Pushing layer gcr.io/jstrachan-multicluster/cache:6c7691af3464c1beb8793e77393d32f7c756c020cbb2ba0c5d97be802b29515e to cache now 
+
+Showing logs for build [32mjstrachan-nodey460-master-d8l4n-7[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/nodey460 to an unshallow repository
+Generating change log from git ref 0d69f62a2aba79d40829f50b674f70fadeb5196d => c10a34a8245b5b31022eecd934c669f05ec93770
+Associating user x-0 in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 8f89234b8dc0ed4d89eecb5752d46bd6d6893c84 with issues: User.jenkins.io "x-0" is in*****: metadata.labels: In***** value: "-0": a ***** label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for *****ation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 8f89234b8dc0ed4d89eecb5752d46bd6d6893c84 with issues: User.jenkins.io "x-0" is in*****: metadata.labels: In***** value: "-0": a ***** label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for *****ation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+Associating user jstrachan in users.jenkins.io with email james.strachan@gmail.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user jstrachan in users.jenkins.io
+WARNING: Failed to enrich commit 7f108706601f3a783c59c86baebdf160a2d5cc2d with issues: User.jenkins.io "jstrachan" is in*****: metadata.labels: In***** value: "-0": a ***** label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for *****ation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+WARNING: Failed to enrich commit 7f108706601f3a783c59c86baebdf160a2d5cc2d with issues: users.jenkins.io "x-0" already exists
+Associating user jstrachan in users.jenkins.io with email james.strachan@gmail.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user jstrachan in users.jenkins.io
+WARNING: Failed to enrich commit a36a6cecd4bdb3775d9bfc341e0729d8b8cfc619 with issues: User.jenkins.io "jstrachan" is in*****: metadata.labels: In***** value: "-0": a ***** label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for *****ation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+WARNING: Failed to enrich commit a36a6cecd4bdb3775d9bfc341e0729d8b8cfc619 with issues: users.jenkins.io "x-0" already exists
+WARNING: No release found for jstrachan/nodey460 and tag v1.0.9 so creating a new release
+Updated the release information at https://github.com/jstrachan/nodey460/releases/tag/v1.0.9
+generated: /workspace/source/charts/nodey460/templates/release.yaml
+Created Release nodey460-1-0-9 resource in namespace **
+Updating PipelineActivity jstrachan-nodey460-master-7 with version 1.0.9
+Updated PipelineActivities jstrachan-nodey460-master-7 with release notes URL: https://github.com/jstrachan/nodey460/releases/tag/v1.0.9
+
+Showing logs for build [32mjstrachan-nodey460-master-d8l4n-7[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: bucketrepo http://bucketrepo/bucketrepo/charts/
+Successfully added Helm repository bucketrepo.
+Uploading chart file nodey460-1.0.9.tgz to http://bucketrepo/bucketrepo/charts/api/charts
+Received 200 response: 
+
+Showing logs for build [32mjstrachan-nodey460-master-d8l4n-7[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app nodey460 version 1.0.9 to namespace **-staging
+WARNING: could not find upstream git URL failed to unmarshal  due to no GitConfDir defined
+pushed merged branch promote-nodey460-1.0.9
+Created Pull Request: https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+Added label updatebot to Pull Request https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+WARNING: Failed to query the Pull Request last commit status for https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10 ref c1448bda10d783b222ed67182b06ae79d12b18a3 Could not find a status for repository cb-kubecd/environment-bootv3-scratch2-staging with ref c1448bda10d783b222ed67182b06ae79d12b18a3
+WARNING: Failed to query the Pull Request last commit status for https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10 ref c1448bda10d783b222ed67182b06ae79d12b18a3 Could not find a status for repository cb-kubecd/environment-bootv3-scratch2-staging with ref c1448bda10d783b222ed67182b06ae79d12b18a3
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+got git provider status pending from PR https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10
+error: Timed out waiting for pull request https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/10 to merge. Waited 1h0m0s
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-promote-jx-promote'. The execution of the pipeline has stopped.[0m
