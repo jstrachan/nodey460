@@ -1,0 +1,6 @@
+jxRequirements:
+  ingress:
+    domain: mydomain
+    namespaceSubDomain: "."
+    tls:
+      enabled: true 
